@@ -44,3 +44,7 @@ Route::get('/about', [UserController::class, 'index']);
 
     });
 });
+
+# 1.)Blade Template - Layout Templating View
+
+[Blade-Templating-Engine] : Blade Templating Engine adalah fitur pada Laravel 9 yang berguna untuk membantu developer dalam pengembangan tampilan halaman web
