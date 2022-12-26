@@ -45,6 +45,22 @@ Route::get('/about', [UserController::class, 'index']);
     });
 });
 
-# 1.)Blade Template - Layout Templating View
+# 2.)Blade Template - Layout Templating View
 
 [Blade-Templating-Engine] : Blade Templating Engine adalah fitur pada Laravel 9 yang berguna untuk membantu developer dalam pengembangan tampilan halaman web
+
+# 3.)Penjelasan .Env (Environtment)
+
+[.Env] : Env atau Environtment adalah nilai nilai yang mengatur struktur Koneksi & Database pada Laravel
+
+# 4.)Database Migration
+
+[Database-Migration] : Migrations adalah Version Control untuk Database, Migrations memungkinkan kita untuk migration struktur Database yang dibuat pada file Laravel
+
+[Struktur-Migration] : Untuk membuat Migrations nama file harus bersifat plural, contoh : `admin` => `admins`
+
+[Cara-Membuat-Migration] : php artisan make:migration create_[Nama-Table-Plural]_table
+
+[php-artisan-migrate] : Berguna untuk menjalankan Schema migrati ke Database
+
+[php-artisan-migrate:rollback] : Berguna untuk rollback satu langkah ke belakang 
