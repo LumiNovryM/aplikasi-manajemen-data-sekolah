@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('students', function (Blueprint $table) {
-            $table->string('gender', 10)->required()->after('name');
+        Schema::table('class', function (Blueprint $table) {
+            $table->string('name')->unique()->change();
         });
     }
 
@@ -25,8 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('students', function (Blueprint $table) {
-            $table->dropColumn('gender');
+        Schema::table('class', function (Blueprint $table) {
+            $table->dropUnique('class_name_unique');
         });
     }
 };

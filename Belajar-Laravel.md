@@ -74,3 +74,9 @@ Route::get('/about', [UserController::class, 'index']);
 [View] : View adalah bagian yang menampilkan tampilan website ke browser
 
 [Controller] : Controller adalah penghubung antara Model dan View
+
+# 6.)Database Seeding (Seeder)
+
+[Database-Seeding(Seeder)] : Sesuai namanya Seeding(Seeder) yaitu menanamkan benih (data) ke database, Untuk Pertama kali
+
+[Ubuntu-Note] : Error Ketika db:seed dengan error mess "call to undefined function mb_strimwidth". Solved With sudo apt-get install php-mbstring
