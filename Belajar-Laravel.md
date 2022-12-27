@@ -64,3 +64,13 @@ Route::get('/about', [UserController::class, 'index']);
 [php-artisan-migrate] : Berguna untuk menjalankan Schema migrati ke Database
 
 [php-artisan-migrate:rollback] : Berguna untuk rollback satu langkah ke belakang 
+
+# 5.)Model View Controller (MVC)
+
+[MVC] : MVC adalah paradigma yang berkaitan dengan Paradigma OOP, yang dimana memisahkan View, Model (Database), dan Controller
+
+[Model] : Model adalah bagian yang mengatur Data
+
+[View] : View adalah bagian yang menampilkan tampilan website ke browser
+
+[Controller] : Controller adalah penghubung antara Model dan View

@@ -23,10 +23,10 @@
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
+                <a class="nav-link" href="/students">Students</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Product</a>
+                <a class="nav-link" href="/class">Class</a>
               </li>
             </ul>
           </div>
@@ -35,7 +35,9 @@
     {{-- Navbar End --}}
 
     {{-- Content Start --}}
-    @yield('content')
+    <div class="container">
+      @yield('content')
+    </div>
     {{-- Content End --}}
 
     {{-- Bootstrap --}}
