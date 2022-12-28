@@ -80,3 +80,7 @@ Route::get('/about', [UserController::class, 'index']);
 [Database-Seeding(Seeder)] : Sesuai namanya Seeding(Seeder) yaitu menanamkan benih (data) ke database, Untuk Pertama kali
 
 [Ubuntu-Note] : Error Ketika db:seed dengan error mess "call to undefined function mb_strimwidth". Solved With sudo apt-get install php-mbstring
+
+# 7.)Factory (Faker)
+
+[Factory(Faker)] : Merupakan library PHP yang mampu meng-generate data palsu untuk kita

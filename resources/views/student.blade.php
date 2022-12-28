@@ -8,7 +8,7 @@
     <ol>
         @foreach ($studentlist as $data)
             <li>
-                {{ $data->nama }} || {{ $data->gender }} || {{ $data->nis }}
+                {{ $data->name }} || {{ $data->gender }} || {{ $data->nis }}
             </li>
         @endforeach
     </ol>
