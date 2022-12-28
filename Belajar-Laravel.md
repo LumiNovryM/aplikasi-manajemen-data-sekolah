@@ -122,3 +122,15 @@ Route::get('/about', [UserController::class, 'index']);
         ]);
 
 [Contoh-Syntax-Eloquent-Delete-Data] : Student::find(30)->delete()
+
+# 8.)Collection Methods
+
+[Collection-Methods] : Collection merupakan sebuah fitur bawaan Laravel yang digunakan untuk mengola data array, baik itu dari Eloquent maupun data yang dibuat sendiri berbentuk array
+
+[AVG] : Untuk Menghitung rata-rata, contoh : `$result = collect($nilai)->avg()`
+
+[Contains] : Untuk mencari suatu nilai target, contoh : `$result = collect($nilai)->contains(19)`
+
+[Diff] : Untuk melihat perbandingan data 
+
+[Filter] : Untuk menyaring suatu data
