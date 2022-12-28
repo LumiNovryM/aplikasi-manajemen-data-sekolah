@@ -84,3 +84,41 @@ Route::get('/about', [UserController::class, 'index']);
 # 7.)Factory (Faker)
 
 [Factory(Faker)] : Merupakan library PHP yang mampu meng-generate data palsu untuk kita
+
+# 8.)Perbandingan Query Builder & Eloquent
+
+[Query-Builder] : Merupakan sebuah interface yang disediakan Laravel untuk mengorganisir data-data dalam tabel database
+
+[Contoh-Syntax-Query-Builder-Untuk-Get-Data] : $student = DB::table('students')->get();
+
+[Contoh-Syntax-Query-Builder-Insert-Data] : DB::table('students')->insert([
+            'name' => 'Query Builder',
+            'gender' => 'L',
+            'nis' => '02010210',
+            'class_id' => 1
+        ]);
+
+[Contoh-Syntax-Query-Builder-Update-Data] : DB::table('students')->where('id', 26)->update([
+            'name' => 'Query Builder Updated',
+            'class_id' => 3
+        ]);
+
+[Contoh-Syntax-Query-Builder-Delete-Data] : DB::table('students')->where('id', 26)->delete();
+
+[Eloquent] : Merupakan salah satu fitur di Laravel, fitur ini mengelola sebuah data yang ada pada database, menjadi sangat mudah, ORM merupakan teknik mengubah suatu table menjadi sebuah object, yang nanti mudah digunakan
+
+[Contoh-Syntax-Eloquent-Untuk-Get-Data] : $student = Student::all();
+
+[Contoh-Syntax-Eloquent-Untuk-Insert-Data] : Student::create([
+            'name' => 'Eloquent',
+            'gender' => 'P',
+            'nis' => '02010233',
+            'class_id' => 2
+        ]);
+
+[Contoh-Syntax-Eloquent-Update-Data] : Student::find(30)->update([
+            'name' => 'Eloquent Updated',
+            'class_id' => 4
+        ]);
+
+[Contoh-Syntax-Eloquent-Delete-Data] : Student::find(30)->delete()
