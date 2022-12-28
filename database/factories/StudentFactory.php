@@ -21,7 +21,7 @@ class StudentFactory extends Factory
         $faker = faker::create();
         return [
             'name' => $faker->name(),
-            'gender' => Arr::random(['']),
+            'gender' => Arr::random(['P','L']),
             'nis' => mt_rand(0000001, 9999999),
             'class_id' => Arr::random([1,2,3,4])
         ];

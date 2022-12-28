@@ -11,4 +11,9 @@ class ClassRoom extends Model
 
     # Table Name
     protected $table = 'class';
+
+    public function student()
+    {
+        return $this->hasMany(Student::class, 'class_id', 'id');
+    }
 }

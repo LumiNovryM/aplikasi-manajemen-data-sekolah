@@ -134,3 +134,19 @@ Route::get('/about', [UserController::class, 'index']);
 [Diff] : Untuk melihat perbandingan data 
 
 [Filter] : Untuk menyaring suatu data
+
+# 9.)Eloquent Relationship 
+
+[Eloquent-Relationship] : Merupakan method yang didefinisikan didalam Model dan digunakan untuk menghubungkan antara table yang saling berhubungan
+
+[One-To-One-Relationship] : Merupakan relasi yang dimana satu field terhubung dengan satu field data
+
+[Case] : 
+Student -> Class : Many To One
+Class -> Student : One To Many
+
+[Lazy-Loading] : Merupakan pemanggilan data relasi yang tidak diolah di Controller tapi langsung dipanggil di View
+
+[Eager-Loading] : Merupakan pemanggilan data relasi yang diolah terlebih dahulu di Controller
+
+[Perbedaan-Lazy-Loading-&-Eager-Loading] : Cara yang disarankan adalah Eager Loading karena performa dan query yang digunakan lebih sedikit dibandingkan Lazy Loading

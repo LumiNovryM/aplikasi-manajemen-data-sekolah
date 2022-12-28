@@ -9,14 +9,22 @@
     {{-- Table Star --}}
     <table class="table">
         <thead>
-            <tr>No.</tr>
-            <tr>Name</tr>
+            <tr>
+                <td>#</td>
+                <td>Class</td>
+                <td>Students</td>
+            </tr>
         </thead>
         <tbody>
             @foreach ($classlist as $data)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $data->name }}</td>
+                    <td>
+                        @foreach ($data->student as $val)
+                            {{ $loop->iteration }}.){{ $val->name }} <br>
+                        @endforeach
+                    </td>
                 </tr>
             @endforeach
         </tbody>

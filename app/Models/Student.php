@@ -15,4 +15,10 @@ class Student extends Model
         'nis',
         'class_id'
     ];
+
+    # Relasi One To Many (Inverse) / Many To One
+    public function class()
+    {
+        return $this->belongsTo(ClassRoom::class, 'class_id', 'id');
+    }
 }
