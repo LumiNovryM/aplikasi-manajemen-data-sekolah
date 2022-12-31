@@ -20,13 +20,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link {{ ($title == "Home") ? 'active' : '' }}" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/students">Students</a>
+                <a class="nav-link {{ ($title == "Students") ? 'active' : '' }}" href="/students">Students</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/class">Class</a>
+                <a class="nav-link {{ ($title == "Class") ? 'active' : '' }}" href="/class">Class</a>
               </li>
             </ul>
           </div>

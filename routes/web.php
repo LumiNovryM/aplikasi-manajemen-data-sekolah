@@ -19,7 +19,8 @@ Route::get('/', function () {
     return view('home', [
         "name" => "Lumi Novry M",
         "role" => "Admin",
-        "buah" => ["Pisang", "Mangga", "Manggis", "Pepaya", "Apel"]
+        "buah" => ["Pisang", "Mangga", "Manggis", "Pepaya", "Apel"],
+        "title" => "Home"
     ]);
 });
 

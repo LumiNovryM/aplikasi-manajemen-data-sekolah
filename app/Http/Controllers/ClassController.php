@@ -9,9 +9,11 @@ class ClassController extends Controller
 {
     public function index()
     {
+        $title = "Class";
         $class = ClassRoom::with('student')->get();
         return view('classroom',[
-            'classlist' => $class
+            'classlist' => $class,
+            'title' => $title
         ]);
     }
 }

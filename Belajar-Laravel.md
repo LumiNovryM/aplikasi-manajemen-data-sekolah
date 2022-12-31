@@ -150,3 +150,11 @@ Class -> Student : One To Many
 [Eager-Loading] : Merupakan pemanggilan data relasi yang diolah terlebih dahulu di Controller
 
 [Perbedaan-Lazy-Loading-&-Eager-Loading] : Cara yang disarankan adalah Eager Loading karena performa dan query yang digunakan lebih sedikit dibandingkan Lazy Loading
+
+# 10.)N+1 Problem, Lazy Loading VS Eager Loading
+
+[N+1-Problem] : N+1 Query adalah suatu masalah yang terjadi ketika kita memerlukan untuk load data child dari relasi parent-child dimana kita melakukan banyak query select pada child data. N+1 disini artinya adalah 1 Query untuk parent dan N adalah jumlah record pada table child
+
+[Lazy-Loading] : Merupakan pemanggilan data relasi yang tidak diolah di Controller tapi langsung dipanggil di View
+
+[Eager-Loading] : Merupakan pemanggilan data relasi yang diolah terlebih dahulu di Controller
