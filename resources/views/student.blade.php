@@ -16,6 +16,7 @@
                 <td>NIS</td>
                 <td>Class ID</td>
                 <td>Class Name</td>
+                <td>Extracurriculars</td>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +28,11 @@
                 <td>{{ $data->nis }}</td>
                 <td>{{ $data->class_id }}</td>
                 <td>{{ $data->class->name }}</td>
+                <td>
+                    @foreach ($data->extracurriculars as $item)
+                        {{ $loop->iteration }}.){{ $item->name }}<br>
+                    @endforeach
+                </td>
             </tr>
             @endforeach
         </tbody>

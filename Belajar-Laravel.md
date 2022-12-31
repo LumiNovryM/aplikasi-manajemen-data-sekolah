@@ -158,3 +158,7 @@ Class -> Student : One To Many
 [Lazy-Loading] : Merupakan pemanggilan data relasi yang tidak diolah di Controller tapi langsung dipanggil di View
 
 [Eager-Loading] : Merupakan pemanggilan data relasi yang diolah terlebih dahulu di Controller
+
+# 11.)Many To Many Relationship
+
+[Many-To-Many-Relationship] : adalah relasi antar table dimana banyak dari masing-masing record tersebut bisa memiliki banyak relasi ke table lainnya

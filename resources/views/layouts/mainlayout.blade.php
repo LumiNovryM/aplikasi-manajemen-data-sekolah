@@ -28,6 +28,9 @@
               <li class="nav-item">
                 <a class="nav-link {{ ($title == "Class") ? 'active' : '' }}" href="/class">Class</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link {{ ($title == "Extracurricular") ? 'active' : '' }}" href="/extracurricular">Extracurricular</a>
+              </li>
             </ul>
           </div>
         </div>
