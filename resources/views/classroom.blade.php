@@ -13,6 +13,7 @@
                 <td>#</td>
                 <td>Class</td>
                 <td>Students</td>
+                <td>HomeRoom Teacher</td>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@
                             {{ $loop->iteration }}.){{ $val->name }} <br>
                         @endforeach
                     </td>
+                    <td>{{ $data->teacher->name }}</td>
                 </tr>
             @endforeach
         </tbody>

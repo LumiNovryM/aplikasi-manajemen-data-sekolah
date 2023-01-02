@@ -162,3 +162,7 @@ Class -> Student : One To Many
 # 11.)Many To Many Relationship
 
 [Many-To-Many-Relationship] : adalah relasi antar table dimana banyak dari masing-masing record tersebut bisa memiliki banyak relasi ke table lainnya
+
+# 12.)Nested Relationship 
+
+[Nested-Relationship] : Nested Relatinship adalah sebuah table yang memiliki relasi bersarang

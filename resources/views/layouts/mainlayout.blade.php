@@ -29,7 +29,10 @@
                 <a class="nav-link {{ ($title == "Class") ? 'active' : '' }}" href="/class">Class</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($title == "Extracurricular") ? 'active' : '' }}" href="/extracurricular">Extracurricular</a>
+                <a class="nav-link {{ ($title == "Extracurricular") ? 'active' : '' }}" href="/extracurricular">Extracurriculars</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{ ($title == "Teachers") ? 'active' : '' }}" href="/teacher">Teachers</a>
               </li>
             </ul>
           </div>
