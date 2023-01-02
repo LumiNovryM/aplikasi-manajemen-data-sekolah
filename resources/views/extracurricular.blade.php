@@ -14,6 +14,7 @@
             <td>#</td>
             <td>Name</td>
             <td>Member</td>
+            <td>Action</td>
         </tr>
     </thead>
     <tbody>

@@ -11,10 +11,16 @@ class StudentController extends Controller
     public function index()
     {
         $title = "Students";
-        $student = Student::with(['class.teacher','extracurriculars'])->get();
+        $student = Student::all();
         return view('student',[
             'studentlist' => $student,
             'title' => $title
         ]);    
+    }
+
+    public function show($id)
+    {
+        $student = Student::with(['class','extracurriculars'])->findOrFail($id);
+        return view('student-detail', ['student' => $student, 'title' => 'Students']);
     }
 }

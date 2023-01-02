@@ -10,10 +10,16 @@ class ClassController extends Controller
     public function index()
     {
         $title = "Class";
-        $class = ClassRoom::with(['student','teacher'])->get();
+        $class = ClassRoom::get();
         return view('classroom',[
             'classlist' => $class,
             'title' => $title
         ]);
+    }
+
+    public function show($id)
+    {
+        $class = ClassRoom::with(['student', 'teacher'])->findOrFail($id);
+        return view('class-detail', ['class' => $class, 'title' => 'Class']);
     }
 }

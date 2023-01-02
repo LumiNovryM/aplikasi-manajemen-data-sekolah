@@ -14,6 +14,7 @@
                 <td>Name</td>
                 <td>Gender</td>
                 <td>NIS</td>
+                <td>Action</td>
             </tr>
         </thead>
         <tbody>
@@ -23,6 +24,9 @@
                 <td>{{ $data->name }}</td>
                 <td>{{ $data->gender }}</td>
                 <td>{{ $data->nis }}</td>
+                <td>
+                    <a href="/students/{{ $data->id }}" class="btn btn-info">Detail</a>
+                </td>
             </tr>
             @endforeach
         </tbody>

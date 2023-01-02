@@ -166,3 +166,11 @@ Class -> Student : One To Many
 # 12.)Nested Relationship 
 
 [Nested-Relationship] : Nested Relatinship adalah sebuah table yang memiliki relasi bersarang
+
+# 13.)Membuat Halaman Detail 
+
+[Find] : Find Merupakan method untuk mencari id, yang dimana jika id tidak ditemukan maka akan menampilkan halaman error
+
+[FindOrFail] : FindOrFail Merupakan method untuk mencari id, yang dimana jika id tidak ditemukan maka akan menampilakn halaman 404 NOT FOUND
+
+## 53:24 ##

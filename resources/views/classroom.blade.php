@@ -1,6 +1,6 @@
 @extends('layouts.mainlayout')
 
-@section('title', "Students")
+@section('title', "Class")
 
 @section('content')
     <h1>Ini Halaman Class</h1>
@@ -12,8 +12,7 @@
             <tr>
                 <td>#</td>
                 <td>Class</td>
-                <td>Students</td>
-                <td>HomeRoom Teacher</td>
+                <td>Action</td>
             </tr>
         </thead>
         <tbody>
@@ -22,11 +21,8 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $data->name }}</td>
                     <td>
-                        @foreach ($data->student as $val)
-                            {{ $loop->iteration }}.){{ $val->name }} <br>
-                        @endforeach
+                        <a href="/class/{{ $data->id }}" class="btn btn-info">Detail</a>
                     </td>
-                    <td>{{ $data->teacher->name }}</td>
                 </tr>
             @endforeach
         </tbody>
