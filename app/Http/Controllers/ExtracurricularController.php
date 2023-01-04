@@ -16,4 +16,13 @@ class ExtracurricularController extends Controller
             "title" => $title
         ]);
     }
+
+    public function show($id)
+    {
+        $eskul = Extracurricular::with('students')->findOrFail($id);
+        return view('extracurricular-detail',[
+            "eskul" => $eskul,
+            "title" => "Extracurriculars"
+        ]);
+    }
 }

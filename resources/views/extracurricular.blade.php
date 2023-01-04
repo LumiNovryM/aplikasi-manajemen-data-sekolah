@@ -7,6 +7,12 @@
 <h1>Ini Halaman Extracurricular</h1>
 <h3>Extracurricular List</h3>
 
+    {{-- Button Create Data Start --}}
+    <div class="my-5">
+        <a href="" class="btn btn-primary">Create Data</a>
+    </div>
+    {{-- Button Create Data End --}}
+
 {{-- Table Start --}}
 <table class="table">
     <thead>
@@ -23,9 +29,7 @@
             <td>{{ $loop->iteration }}</td>
             <td>{{ $data->name }}</td>
             <td>
-                @foreach ($data->students as $item)
-                    {{ $loop->iteration }}.){{ $item->name }}<br>
-                @endforeach
+                <a href="/extracurricular-detail/{{ $data->id }}" class="btn btn-success">Detail</a>
             </td>
         </tr>
         @endforeach

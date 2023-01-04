@@ -6,6 +6,12 @@
     <h1>Ini Halaman Student</h1>
     <h3>Student List</h3>
 
+    {{-- Button Create Data Start --}}
+    <div class="my-5">
+        <a href="/students-add" class="btn btn-primary">Create Data</a>
+    </div>
+    {{-- Button Create Data End --}}
+
     {{-- Table Start --}}
     <table class="table">
         <thead>
@@ -25,7 +31,7 @@
                 <td>{{ $data->gender }}</td>
                 <td>{{ $data->nis }}</td>
                 <td>
-                    <a href="/students/{{ $data->id }}" class="btn btn-info">Detail</a>
+                    <a href="/students-detail/{{ $data->id }}" class="btn btn-success">Detail</a>
                 </td>
             </tr>
             @endforeach

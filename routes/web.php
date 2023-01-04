@@ -19,10 +19,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home', [
+    return view('home',[
         "name" => "Lumi Novry M",
         "role" => "Admin",
-        "buah" => ["Pisang", "Mangga", "Manggis", "Pepaya", "Apel"],
         "title" => "Home"
     ]);
 });
@@ -31,20 +30,27 @@ Route::get('/', function () {
 // 1.)Index Route
 Route::get('/students', [StudentController::class, 'index']);
 // 2.)Detail Route
-Route::get('/students/{id}', [StudentController::class, 'show']);
+Route::get('/students-detail/{id}', [StudentController::class, 'show']);
+// 3.)Create Route
+Route::get('/students-add', [StudentController::class, 'create']);
+// 4.)Create Action
+Route::post('/students-save', [StudentController::class, 'store']);
 
 
 # Class Route
 // 1.)Index Route
 Route::get('/class', [ClassController::class, 'index']);
 // 2.)Detail Route
-Route::get('/class/{id}', [ClassController::class, 'show']);
+Route::get('/class-detail/{id}', [ClassController::class, 'show']);
 
 # Extracurricular Route
 // 1.)Index Route
 Route::get('/extracurricular', [ExtracurricularController::class, 'index']);
 // 2.)Detail Route
-Route::get('/extracurricular/{id}', [ExtracurricularController::class, 'show']);
+Route::get('/extracurricular-detail/{id}', [ExtracurricularController::class, 'show']);
 
 # Teacher Route
+// 1.)Index Route 
 Route::get('/teacher', [TeacherController::class, 'index']);
+// 2.)Detail Route
+Route::get('/teacher-detail/{id}', [TeacherController::class, 'show']);

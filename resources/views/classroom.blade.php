@@ -6,6 +6,12 @@
     <h1>Ini Halaman Class</h1>
     <h3>Class List</h3>
 
+    {{-- Button Create Data Start --}}
+    <div class="my-5">
+        <a href="" class="btn btn-primary">Create Data</a>
+    </div>
+    {{-- Button Create Data End --}}
+
     {{-- Table Star --}}
     <table class="table">
         <thead>
@@ -21,7 +27,7 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $data->name }}</td>
                     <td>
-                        <a href="/class/{{ $data->id }}" class="btn btn-info">Detail</a>
+                        <a href="/class-detail/{{ $data->id }}" class="btn btn-success">Detail</a>
                     </td>
                 </tr>
             @endforeach
