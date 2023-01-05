@@ -9,6 +9,12 @@ class ClassRoom extends Model
 {
     use HasFactory;
 
+    # Fill Field Table
+    protected $fillable = [
+        'name',
+        'teacher_id'
+    ];
+
     # Table Name
     protected $table = 'class';
 

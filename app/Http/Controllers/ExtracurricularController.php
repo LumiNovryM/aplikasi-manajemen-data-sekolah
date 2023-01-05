@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ExtracurricularController extends Controller
 {
+    # Index Data
     public function index()
     {
         $title = "Extracurricular";
@@ -17,6 +18,7 @@ class ExtracurricularController extends Controller
         ]);
     }
 
+    # Detail Data
     public function show($id)
     {
         $eskul = Extracurricular::with('students')->findOrFail($id);

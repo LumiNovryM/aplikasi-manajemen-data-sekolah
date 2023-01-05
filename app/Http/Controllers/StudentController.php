@@ -42,5 +42,6 @@ class StudentController extends Controller
     {
         // dd($request->all());
         Student::create($request->all());
+        return redirect('/students');
     }
 }

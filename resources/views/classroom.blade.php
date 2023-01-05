@@ -8,7 +8,7 @@
 
     {{-- Button Create Data Start --}}
     <div class="my-5">
-        <a href="" class="btn btn-primary">Create Data</a>
+        <a href="/class-create" class="btn btn-primary">Create Data</a>
     </div>
     {{-- Button Create Data End --}}
 

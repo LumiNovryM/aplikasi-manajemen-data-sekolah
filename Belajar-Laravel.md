@@ -173,4 +173,8 @@ Class -> Student : One To Many
 
 [FindOrFail] : FindOrFail Merupakan method untuk mencari id, yang dimana jika id tidak ditemukan maka akan menampilakn halaman 404 NOT FOUND
 
-## Lanjut Nanti 36:10
+# 14.)Create Data Ke Database
+
+# 15.)Update Data Ke Database
+
+## Lanjut Nanti 02:46

@@ -10,7 +10,7 @@
             @csrf
             <div class="mb-3">
                 <label for="name">Name</label>
-                <input type="text" name="name" class="form-control" id="name" required>
+                <input type="text" name="name" autocomplete="off" class="form-control" id="name" required>
             </div>
             <div class="mb-3">
                 <label for="gender">Gender</label>
@@ -22,7 +22,7 @@
             </div>
             <div class="mb-3">
                 <label for="nis">NIS</label>
-                <input type="number" name="nis" class="form-control" id="nis" required>
+                <input type="number" name="nis" autocomplete="off" class="form-control" id="nis" required>
             </div>
             <div class="mb-3">
                 <label for="class">Class</label>

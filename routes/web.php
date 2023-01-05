@@ -42,12 +42,20 @@ Route::post('/students-save', [StudentController::class, 'store']);
 Route::get('/class', [ClassController::class, 'index']);
 // 2.)Detail Route
 Route::get('/class-detail/{id}', [ClassController::class, 'show']);
+// 3.)Create Route
+Route::get('/class-create', [ClassController::class, 'create']);
+// 4.)Create Action
+Route::post('/class-save', [ClassController::class, 'store']);
 
 # Extracurricular Route
 // 1.)Index Route
 Route::get('/extracurricular', [ExtracurricularController::class, 'index']);
 // 2.)Detail Route
 Route::get('/extracurricular-detail/{id}', [ExtracurricularController::class, 'show']);
+// 3.)Create Route
+Route::get('/extracurricular-create', [ExtracurricularController::class, 'create']);
+// 4.)Create Action
+Route::post('/extracurricular-save', [ExtracurricularController::class, 'store']);
 
 # Teacher Route
 // 1.)Index Route 
