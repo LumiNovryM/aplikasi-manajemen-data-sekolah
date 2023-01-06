@@ -32,6 +32,7 @@
                 <td>{{ $data->nis }}</td>
                 <td>
                     <a href="/students-detail/{{ $data->id }}" class="btn btn-success">Detail</a>
+                    <a href="/students-edit/{{ $data->id }}" class="btn btn-warning">Update</a>
                 </td>
             </tr>
             @endforeach

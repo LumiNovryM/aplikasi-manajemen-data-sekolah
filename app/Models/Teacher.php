@@ -9,6 +9,12 @@ class Teacher extends Model
 {
     use HasFactory;
 
+    # Fillabel Field Data
+    public $fillable = [
+        'name'
+    ];
+
+    # Relationship To Class [One To Many Relationship]
     public function class()
     {
         return $this->hasOne(ClassRoom::class);

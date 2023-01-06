@@ -44,4 +44,24 @@ class StudentController extends Controller
         Student::create($request->all());
         return redirect('/students');
     }
+
+    # Update Data
+    public function edit($id)
+    {
+        $class = ClassRoom::all();
+        $student = Student::with(['class','extracurriculars'])->findOrFail($id);
+        return view('student-edit',[
+            "title" => "Students",
+            "students" => $student,
+            "class" => $class
+        ]);
+    }
+
+    # Update Data Action
+    public function update(Request $request, $id)
+    {
+        $student = Student::findOrFail($id);
+        $student->update($request->all());
+        return redirect('/students');
+    }
 }

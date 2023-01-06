@@ -8,7 +8,7 @@
 
     {{-- Button Create Data Start --}}
     <div class="my-5">
-        <a href="" class="btn btn-primary">Create Data</a>
+        <a href="/teacher-create" class="btn btn-primary">Create Data</a>
     </div>
     {{-- Button Create Data End --}}
 
@@ -28,6 +28,7 @@
                 <td>{{ $item->name }}</td>
                 <td>
                     <a href="/teacher-detail/{{ $item->id }}" class="btn btn-success">Detail</a>
+                    <a href="/teacher-edit/{{ $item->id }}" class="btn btn-warning">Update</a>
                 </td>
             </tr>
             @endforeach

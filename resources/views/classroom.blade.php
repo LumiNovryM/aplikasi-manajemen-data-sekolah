@@ -28,6 +28,7 @@
                     <td>{{ $data->name }}</td>
                     <td>
                         <a href="/class-detail/{{ $data->id }}" class="btn btn-success">Detail</a>
+                        <a href="/class-edit/{{ $data->id }}" class="btn btn-warning">Update</a>
                     </td>
                 </tr>
             @endforeach

@@ -9,6 +9,11 @@ class Extracurricular extends Model
 {
     use HasFactory;
 
+    # Fillabel Field Data Table
+    protected $fillable = [
+        'name'
+    ];
+
     # Many To Many 
     public function students()
     {
