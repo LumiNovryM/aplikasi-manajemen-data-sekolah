@@ -180,3 +180,7 @@ Class -> Student : One To Many
 # 16.)Session Flash Message
 
 [Session-Flash-Message] : Flash Message adalah sebuah feedback berupa informasi success, error, warning, dll yang ada pada Laravel
+
+# 17.)Form Validation + Flash Message
+
+[Form-Validation] : Adalah Proses validasi data input yang diinputkan dari form.Proses validasi ini bisanya dilakukan di Controller dan menggunakan library form_validation
