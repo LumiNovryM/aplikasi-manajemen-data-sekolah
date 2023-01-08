@@ -80,4 +80,23 @@ class StudentController extends Controller
         }
         return redirect('/students');
     }
+
+    # Delete Data
+    public function delete($id)
+    {
+        $student = Student::findOrFail($id);
+        return view('student-delete', [
+            'student' => $student,
+            'title' => 'Students'
+        ]);
+    }
+
+    # Delete Data Action
+    public function destroy($id)
+    {
+        $student = Student::findOrFail($id);
+        $student->delete();
+
+        return redirect('/students');
+    }
 }

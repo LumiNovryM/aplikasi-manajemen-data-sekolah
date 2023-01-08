@@ -6,6 +6,7 @@ use App\Models\ClassRoom;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use PhpParser\Builder\Class_;
 
 class ClassController extends Controller
 {
@@ -80,6 +81,25 @@ class ClassController extends Controller
             Session::flash('update-erorr');
             Session::flash('message', 'Updated Class Error!');
         }
+        return redirect('/class');
+    }
+
+    # Delete Data
+    public function delete($id)
+    {
+        $class = ClassRoom::findOrFail($id);
+        return view('class-delete', [
+            'class' => $class,
+            'title' => "Class"
+        ]);
+    }
+
+    # Delete Data Action
+    public function destroy($id)
+    {
+        $class = ClassRoom::findOrFail($id);
+        $class->delete();
+
         return redirect('/class');
     }
 }

@@ -53,6 +53,7 @@
                 <td>
                     <a href="/students-detail/{{ $data->id }}" class="btn btn-success">Detail</a>
                     <a href="/students-edit/{{ $data->id }}" class="btn btn-warning">Update</a>
+                    <a href="/student-delete/{{ $data->id }}" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
             @endforeach

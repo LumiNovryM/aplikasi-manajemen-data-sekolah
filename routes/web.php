@@ -9,6 +9,7 @@ use App\Models\Extracurricular;
 use App\Models\Student;
 use App\Models\Teacher;
 use Illuminate\Support\Facades\Route;
+use PhpParser\Builder\Class_;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,10 @@ Route::post('/students-save', [StudentController::class, 'store']);
 Route::get('/students-edit/{id}', [StudentController::class, 'edit']);
 // 6.)Update Action Route
 Route::put('/students-update/{id}', [StudentController::class, 'update']);
+// 7.)Delete Data Route
+Route::get('/student-delete/{id}', [StudentController::class, 'delete']);
+// 8.)Delete Data Action Route
+Route::delete('/student-destroy/{id}', [StudentController::class, 'destroy']);
 
 
 # Class Route
@@ -57,6 +62,10 @@ Route::post('/class-save', [ClassController::class, 'store']);
 Route::get('/class-edit/{id}', [ClassController::class, 'edit']);
 // 6.)Update Action Route
 Route::put('/class-update/{id}', [ClassController::class, 'update']);
+// 7.)Delete Data Route
+Route::get('/class-delete/{id}', [ClassController::class, 'delete']);
+// 8.)Delete Data Action Route
+Route::delete('/class-destroy/{id}', [ClassController::class, 'destroy']);
 
 # Extracurricular Route [Master]
 // 1.)Index Route
@@ -71,6 +80,11 @@ Route::post('/extracurricular-save', [ExtracurricularController::class, 'store']
 Route::get('/extracurricular-edit/{id}', [ExtracurricularController::class, 'edit']);
 // 6.)Update Action Route
 Route::put('/extracurricular-update/{id}', [ExtracurricularController::class, 'update']);
+// 7.)Delete Data Route
+Route::get('/extracurricular-delete/{id}', [ExtracurricularController::class, 'delete']);
+// 8.)Delete Data Action Route
+Route::delete('/extracurricular-destroy/{id}', [ExtracurricularController::class, 'destroy']);
+
 
 # Teacher Route [Master]
 // 1.)Index Route 
@@ -85,3 +99,7 @@ Route::post('/teacher-save', [TeacherController::class, 'store']);
 Route::get('/teacher-edit/{id}', [TeacherController::class, 'edit']);
 // 6.)Update Action Route
 Route::put('/teacher-update/{id}', [TeacherController::class, 'update']);
+// 7.)Delete Data Route
+Route::get('/teacher-delete/{id}', [TeacherController::class, 'delete']);
+// 8.)Delete Data Action
+Route::delete('/teacher-destroy/{id}', [TeacherController::class, 'destroy']);

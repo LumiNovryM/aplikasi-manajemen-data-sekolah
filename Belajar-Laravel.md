@@ -184,3 +184,5 @@ Class -> Student : One To Many
 # 17.)Form Validation + Flash Message
 
 [Form-Validation] : Adalah Proses validasi data input yang diinputkan dari form.Proses validasi ini bisanya dilakukan di Controller dan menggunakan library form_validation
+
+# 18.)Delete Data 

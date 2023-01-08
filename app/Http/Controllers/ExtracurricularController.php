@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Extracurricular;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Session;
+use PhpParser\Builder\Function_;
+use PhpParser\Node\Expr\FuncCall;
 
 class ExtracurricularController extends Controller
 {
@@ -76,6 +78,24 @@ class ExtracurricularController extends Controller
             Session::flash('update-error');
             Session::flash('message', 'Update Extracurricular Error!');
         }
+        return redirect('/extracurricular');
+    }
+
+    # Delete Data
+    public function delete($id)
+    {
+        $eskul = Extracurricular::findOrFail($id);
+        return view('extracurricular-delete',[
+            'eskul' => $eskul,
+            'title' => 'Extracurricular'
+        ]);
+    }
+
+    # Delete Data Action 
+    public function destroy($id)
+    {
+        $eskul = Extracurricular::findOrFail($id);
+        $eskul->delete();
         return redirect('/extracurricular');
     }
 }

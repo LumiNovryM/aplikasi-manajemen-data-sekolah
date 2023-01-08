@@ -77,4 +77,22 @@ class TeacherController extends Controller
         }
         return redirect('/teacher');
     }
+
+    # Delete Data
+    public function delete($id)
+    {
+        $data = Teacher::findOrFail($id);
+        return view('teacher-delete',[
+            'teacher' => $data,
+            'title' => "Teachers"
+        ]);
+    }
+
+    # Delete Data Action 
+    public function destroy($id)
+    {
+        $data = Teacher::findOrFail($id);
+        $data->delete();
+        return redirect('/teacher');
+    }
 }

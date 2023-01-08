@@ -49,6 +49,7 @@
                 <td>
                     <a href="/teacher-detail/{{ $item->id }}" class="btn btn-success">Detail</a>
                     <a href="/teacher-edit/{{ $item->id }}" class="btn btn-warning">Update</a>
+                    <a href="/teacher-delete/{{ $item->id }}" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
             @endforeach

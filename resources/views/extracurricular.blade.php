@@ -50,6 +50,7 @@
             <td>
                 <a href="/extracurricular-detail/{{ $data->id }}" class="btn btn-success">Detail</a>
                 <a href="/extracurricular-edit/{{ $data->id }}" class="btn btn-warning">Update</a>
+                <a href="/extracurricular-delete/{{ $data->id }}" class="btn btn-danger">Delete</a>
             </td>
         </tr>
         @endforeach
