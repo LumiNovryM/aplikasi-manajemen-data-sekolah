@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('student_id')->required();
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('extracurricular_id')->required();
-            $table->foreign('extracurricular_id')->references('id')->on('extracurriculars')->onDelete('cascade')->onUpdate('restrict');
+            $table->foreign('extracurricular_id')->references('id')->on('extracurriculars')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

@@ -12,6 +12,26 @@
     </div>
     {{-- Button Create Data End --}}
 
+    {{-- Session Flash Message Start --}}
+    @if(Session::has('success-store'))
+        <div class="alert alert-success" role="alert">
+            {{ Session::get('message') }}
+        </div>
+    @elseif (Session::has('error-store'))
+        <div class="alert alert-danger" role="alert">
+            {{ Session::get('message') }}
+        </div>
+    @elseif (Session::has('success-update')) 
+        <div class="alert alert-success" role="alert">
+            {{ Session::get('message') }}
+        </div>
+    @elseif (Session::has('error-update')) 
+        <div class="alert alert-danger" role="alert">
+            {{ Session::get('message') }}
+        </div>
+    @endif
+    {{-- Session Flash Message End --}}
+
     {{-- Table Start --}}
     <table class="table">
         <thead>

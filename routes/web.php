@@ -3,6 +3,7 @@
 use App\Http\Controllers\ClassController;
 use App\Http\Controllers\ExtracurricularController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\StudentcurricularController;
 use App\Http\Controllers\TeacherController;
 use App\Models\Extracurricular;
 use App\Models\Student;

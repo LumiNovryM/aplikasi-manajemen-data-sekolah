@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ClassRoom;
 use App\Models\Student;
+use App\Models\ClassRoom;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class StudentController extends Controller
 {
@@ -40,8 +40,15 @@ class StudentController extends Controller
     # Create Data Action
     public function store(Request $request)
     {
-        // dd($request->all());
-        Student::create($request->all());
+        $student = Student::create($request->all());
+        # Create Flash Message
+        if($student){
+            Session::flash('success-store');
+            Session::flash('message', 'Add New Student Running Successfully!');
+        }else{
+            Session::flash('error-store');
+            Session::flash('message', 'Add New Student Error!');
+        }
         return redirect('/students');
     }
 
@@ -62,6 +69,14 @@ class StudentController extends Controller
     {
         $student = Student::findOrFail($id);
         $student->update($request->all());
+        # Create Flash Message
+        if($student){
+            Session::flash('success-update');
+            Session::flash('message', 'Updated Student Running Successfully!');
+        }else{
+            Session::flash('error-update');
+            Session::flash('message', 'Updated Student Error!');
+        }
         return redirect('/students');
     }
 }

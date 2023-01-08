@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
+use Illuminate\Support\Facades\Session;
 
 class TeacherController extends Controller
 {
@@ -39,7 +40,15 @@ class TeacherController extends Controller
     # Create Action
     public function store(Request $request)
     {
-        Teacher::create($request->all());
+        $teacher = Teacher::create($request->all());
+        # Create Flash Message
+        if($teacher){
+            Session::flash('store-success');
+            Session::flash('message', 'Add New Teacher Running Successfully!');
+        }else{
+            Session::flash('store-error');
+            Session::flash('message', 'Add New Teacher Error!');
+        }
         return redirect('teacher');
     }
 
@@ -58,6 +67,14 @@ class TeacherController extends Controller
     {
         $teacher = Teacher::findOrFail($id);
         $teacher->update($request->all());
+        # Create Flash Message
+        if($teacher){
+            Session::flash('update-success');
+            Session::flash('message', 'Updated Teacher Running Successfully!');
+        }else{
+            Session::flash('update-error');
+            Session::flash('message', 'Updated Teacher Error!');
+        }
         return redirect('/teacher');
     }
 }

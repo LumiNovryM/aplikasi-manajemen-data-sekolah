@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ClassRoom extends Model
 {
     use HasFactory;
+ 
 
     # Fill Field Table
     protected $fillable = [

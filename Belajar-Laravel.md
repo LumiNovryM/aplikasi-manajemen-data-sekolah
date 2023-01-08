@@ -177,4 +177,6 @@ Class -> Student : One To Many
 
 # 15.)Update Data Ke Database
 
-## Lanjut Nanti 02:46
+# 16.)Session Flash Message
+
+[Session-Flash-Message] : Flash Message adalah sebuah feedback berupa informasi success, error, warning, dll yang ada pada Laravel
