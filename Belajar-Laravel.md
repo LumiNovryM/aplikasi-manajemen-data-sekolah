@@ -186,3 +186,8 @@ Class -> Student : One To Many
 [Form-Validation] : Adalah Proses validasi data input yang diinputkan dari form.Proses validasi ini bisanya dilakukan di Controller dan menggunakan library form_validation
 
 # 18.)Delete Data 
+
+# 19.)Soft Delete & Delete Data
+
+[Soft-Delete] : Soft delete merupakan teknik menghapus data tetapi tidak benar benar dihapus tetapi tidak ditampilkan kepada pengguna, biasanya menggunakan kolom status yang menunjukkan aktif atau tidak aktif. Kelebihan : Apabila data yang dihapus suatu saat dibutuhkan kembali, data tersebut bisa dikembalikan 
+

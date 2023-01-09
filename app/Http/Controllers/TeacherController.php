@@ -93,6 +93,14 @@ class TeacherController extends Controller
     {
         $data = Teacher::findOrFail($id);
         $data->delete();
+        # Create Flash Message
+        if($data){
+            Session::flash('success-destroy');
+            Session::flash('message', 'Delete Teacher Running Successfully!');
+        }else{
+            Session::flash('error-destroy');
+            Session::flash('message', 'Delete Teacher Error!');
+        }
         return redirect('/teacher');
     }
 }

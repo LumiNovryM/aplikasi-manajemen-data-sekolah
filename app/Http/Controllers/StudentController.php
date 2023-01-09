@@ -73,10 +73,10 @@ class StudentController extends Controller
         # Create Flash Message
         if($student){
             Session::flash('success-update');
-            Session::flash('message', 'Updated Student Running Successfully!');
+            Session::flash('message', 'Update Student Running Successfully!');
         }else{
             Session::flash('error-update');
-            Session::flash('message', 'Updated Student Error!');
+            Session::flash('message', 'Update Student Error!');
         }
         return redirect('/students');
     }
@@ -96,7 +96,40 @@ class StudentController extends Controller
     {
         $student = Student::findOrFail($id);
         $student->delete();
-
+        # Create Flash Message
+        if($student){
+            Session::flash('success-destroy');
+            Session::flash('message', 'Delete Student Running Successfully!');
+        }else{
+            Session::flash('error-destroy');
+            Session::flash('message', 'Delete Student Error!');
+        }
         return redirect('/students');
     }
+    
+    # Deleted Data 
+    public function deletedStudent()
+    {
+        $student = Student::onlyTrashed()->get();
+        return view('student-deleted-list', [
+            "title" => "Students",
+            "student" => $student
+        ]);
+    }
+
+    # Restore Deleted Data
+    public function restore($id)
+    {
+        $data = Student::withTrashed()->where('id', $id)->restore();
+        # Create Flash Message
+        if($data){
+            Session::flash('success-restore');
+            Session::flash('message', 'Restore Student Data Running Successfully!');
+        }else{
+            Session::flash('error-restore');
+            Session::flash('message', 'Restore Student Data Error!');
+        }
+        return redirect('/students');
+    }
+
 }

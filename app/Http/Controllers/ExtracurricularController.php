@@ -96,6 +96,14 @@ class ExtracurricularController extends Controller
     {
         $eskul = Extracurricular::findOrFail($id);
         $eskul->delete();
+        # Create Flash Message
+        if($eskul){
+            Session::flash('success-destroy');
+            Session::flash('message', 'Delete Extracurricular Running Successfully!');
+        }else{
+            Session::flash('error-destroy');
+            Session::flash('message', 'Delete Extracurricular Error!');
+        }
         return redirect('/extracurricular');
     }
 }

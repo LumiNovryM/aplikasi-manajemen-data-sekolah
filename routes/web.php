@@ -47,6 +47,10 @@ Route::put('/students-update/{id}', [StudentController::class, 'update']);
 Route::get('/student-delete/{id}', [StudentController::class, 'delete']);
 // 8.)Delete Data Action Route
 Route::delete('/student-destroy/{id}', [StudentController::class, 'destroy']);
+// 9.)List Deleted Data
+Route::get('/student-deleted', [StudentController::class, 'deletedStudent']);
+// 10.)Restore Data Action
+Route::get('/student/{id}/restore', [StudentController::class, 'restore']);
 
 
 # Class Route
@@ -84,7 +88,6 @@ Route::put('/extracurricular-update/{id}', [ExtracurricularController::class, 'u
 Route::get('/extracurricular-delete/{id}', [ExtracurricularController::class, 'delete']);
 // 8.)Delete Data Action Route
 Route::delete('/extracurricular-destroy/{id}', [ExtracurricularController::class, 'destroy']);
-
 
 # Teacher Route [Master]
 // 1.)Index Route 

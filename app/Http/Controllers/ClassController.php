@@ -99,7 +99,14 @@ class ClassController extends Controller
     {
         $class = ClassRoom::findOrFail($id);
         $class->delete();
-
+        # Create Flash Message
+        if($class){
+            Session::flash('success-destroy');
+            Session::flash('message', 'Delete Class Running Successfully!');
+        }else{
+            Session::flash('error-destroy');
+            Session::flash('message', 'Delete Class Error!');
+        }
         return redirect('/class');
     }
 }

@@ -3,12 +3,14 @@
 @section('title', "Students")
 
 @section('content')
+
     <h1>Ini Halaman Student</h1>
     <h3>Student List</h3>
 
     {{-- Button Create Data Start --}}
-    <div class="my-5">
+    <div class="my-5 d-flex justify-content-between">
         <a href="/students-add" class="btn btn-primary">Create Data</a>
+    <a href="/student-deleted" class="btn btn-dark">Show Deleted Data</a>
     </div>
     {{-- Button Create Data End --}}
 
@@ -26,6 +28,22 @@
             {{ Session::get('message') }}
         </div>
     @elseif (Session::has('error-update')) 
+        <div class="alert alert-danger" role="alert">
+            {{ Session::get('message') }}
+        </div>
+    @elseif (Session::has('success-destroy')) 
+        <div class="alert alert-success" role="alert">
+            {{ Session::get('message') }}
+        </div>
+    @elseif (Session::has('error-destroy')) 
+        <div class="alert alert-danger" role="alert">
+            {{ Session::get('message') }}
+        </div>
+    @elseif (Session::has('success-restore')) 
+        <div class="alert alert-success" role="alert">
+            {{ Session::get('message') }}
+        </div>
+    @elseif (Session::has('error-restore')) 
         <div class="alert alert-danger" role="alert">
             {{ Session::get('message') }}
         </div>
