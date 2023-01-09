@@ -11,10 +11,13 @@ use App\Http\Requests\StudentCreateRequest;
 class StudentController extends Controller
 {
     # Index Data
-    public function index()
+    public function index(Request $request)
     {
+        $keyword = $request->keyword;
         $title = "Students";
-        $student = Student::paginate(3);
+        $student = Student::where('name', 'LIKE', '%'.$keyword.'%')->orWhere('gender', $keyword)->orWhere('nis', 'LIKE', '%'.$keyword.'%')->orWhereHas('class', function($query) use($keyword) {
+            $query->where('name', 'LIKE', '%'.$keyword.'%');
+        })->paginate(3);
         return view('student',[
             'studentlist' => $student,
             'title' => $title

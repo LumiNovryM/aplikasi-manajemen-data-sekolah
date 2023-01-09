@@ -7,10 +7,21 @@
     <h1>Ini Halaman Student</h1>
     <h3>Student List</h3>
 
+    {{-- Search Start --}}
+    <div class="my-3 mb-3 col-12 col-sm-8 col-md-4">
+        <form action="" method="GET">
+            <div class="input-group mb-3 col-12 col-sm-8 col-md-6">
+                <input type="text" class="form-control" autocomplete="off" name="keyword" id="floatingInputGroup1" placeholder="Username">
+                <button class="input-group-text btn btn-primary btn-sm">Search</button>
+            </div>
+        </form>
+    </div>
+    {{-- Search End --}}
+
     {{-- Button Create Data Start --}}
     <div class="my-5 d-flex justify-content-between">
-        <a href="/students-add" class="btn btn-primary">Create Data</a>
-    <a href="/student-deleted" class="btn btn-dark">Show Deleted Data</a>
+        <a href="/students-add" class="btn btn-primary btn-sm">Create Data</a>
+    <a href="/student-deleted" class="btn btn-dark btn-sm">Show Deleted Data</a>
     </div>
     {{-- Button Create Data End --}}
 
@@ -58,6 +69,7 @@
                 <td>Name</td>
                 <td>Gender</td>
                 <td>NIS</td>
+                <td>Class</td>
                 <td>Action</td>
             </tr>
         </thead>
@@ -68,10 +80,11 @@
                 <td>{{ $data->name }}</td>
                 <td>{{ $data->gender }}</td>
                 <td>{{ $data->nis }}</td>
+                <td>{{ $data->class->name }}</td>
                 <td>
-                    <a href="/students-detail/{{ $data->id }}" class="btn btn-success">Detail</a>
-                    <a href="/students-edit/{{ $data->id }}" class="btn btn-warning">Update</a>
-                    <a href="/student-delete/{{ $data->id }}" class="btn btn-danger">Delete</a>
+                    <a href="/students-detail/{{ $data->id }}" class="btn btn-success btn-sm">Detail</a>
+                    <a href="/students-edit/{{ $data->id }}" class="btn btn-warning btn-sm">Update</a>
+                    <a href="/student-delete/{{ $data->id }}" class="btn btn-danger btn-sm">Delete</a>
                 </td>
             </tr>
             @endforeach
@@ -81,7 +94,7 @@
 
     <div class="my-5">
         {{-- Paginate Start --}}
-            {{ $studentlist->links() }}
+            {{ $studentlist->withQueryString()->links() }}
         {{-- Paginate End --}}
     </div>
 

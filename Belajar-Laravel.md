@@ -198,3 +198,7 @@ Class -> Student : One To Many
 [Paginate] : Paginate akan menampilkan data sebanyak parameter yang diberikan dan juga total data
 
 [simpelPaginate] : simplePaginate akan menampilkan data sebanyak paramter yang diberikan tapi tidak memberikan total data
+
+# 21.)Search Data + Pagination
+
+[Search-Data] : Search Data adalah fitur dimana memungkinkan "User" untuk mencari suatu data berdasarkan keinginannya
