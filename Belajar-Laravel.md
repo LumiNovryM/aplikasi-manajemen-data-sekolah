@@ -191,3 +191,10 @@ Class -> Student : One To Many
 
 [Soft-Delete] : Soft delete merupakan teknik menghapus data tetapi tidak benar benar dihapus tetapi tidak ditampilkan kepada pengguna, biasanya menggunakan kolom status yang menunjukkan aktif atau tidak aktif. Kelebihan : Apabila data yang dihapus suatu saat dibutuhkan kembali, data tersebut bisa dikembalikan 
 
+# 20.)Pagination 
+
+[Pagination] : Pagination merupakan sebuab fitur web yang digunakan untuk membatasi tampilan data agar tidak terlalu panjang dan lebih rapi.Penggunaan Pagination banyak dipergunakan untuk menampilkan data dalam jumlah banyak, sehingga dapat dipisah/dipilih berapa data yang akan ditampilkan terlebih dahulu sesui dengan urutan akan kriteria pencarian tertentu
+
+[Paginate] : Paginate akan menampilkan data sebanyak parameter yang diberikan dan juga total data
+
+[simpelPaginate] : simplePaginate akan menampilkan data sebanyak paramter yang diberikan tapi tidak memberikan total data

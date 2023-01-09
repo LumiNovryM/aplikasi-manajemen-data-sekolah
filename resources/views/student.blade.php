@@ -79,4 +79,10 @@
     </table>
     {{-- Table End --}}
 
+    <div class="my-5">
+        {{-- Paginate Start --}}
+            {{ $studentlist->links() }}
+        {{-- Paginate End --}}
+    </div>
+
 @endsection
