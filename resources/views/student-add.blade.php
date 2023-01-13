@@ -19,7 +19,7 @@
         {{-- Error Message From Validation End --}}
 
         {{-- Form Data Start --}}
-        <form action="/students-save" method="post">
+        <form action="/students-save" method="post" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="name">Name</label>
@@ -45,6 +45,12 @@
                         <option value="{{ $item->id }}">{{ $item->name }}</option>
                     @endforeach
                 </select>
+            </div>
+
+            <div class="mb-3">
+                <div class="input-group">
+                    <input type="file" class="form-control" id="photo" name="photo">
+                </div>
             </div>
             <button class="btn btn-success" type="submit">
                 Save

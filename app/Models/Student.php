@@ -17,7 +17,8 @@ class Student extends Model
         'name',
         'gender',
         'nis',
-        'class_id'
+        'class_id',
+        'image'
     ];
 
     # Relasi One To Many (Inverse) / Many To One

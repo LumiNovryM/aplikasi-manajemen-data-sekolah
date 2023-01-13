@@ -6,7 +6,17 @@
 
     <h2>Anda Sedang Melihat Data Siswa "{{ $student->name }}"</h2>
 
-   <div class="mt-5 mb-5">
+   @if ($student->image)
+    <div class="my-3">
+        <img height="120" src="{{ asset('storage/photo/'.$student->image) }}" alt="{{ $student->name }}">
+    </div>
+    @else
+    <br>
+    <div class="my-3">
+        <h4>{{ $student->name }} Belum Mengupload Gambar</h4>
+    </div>
+    @endif
+    <div class="mt-5 mb-5">
     {{-- Table Start --}}
     <table class="table table-bordered ">
         <tr>
@@ -45,5 +55,7 @@
         width: 25%;
     }
    </style>
+
+
 
 @endsection

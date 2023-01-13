@@ -44,6 +44,17 @@ class StudentController extends Controller
     # Create Data Action
     public function store(StudentCreateRequest $request)
     {
+        $newName = '';
+    
+        # Make Condition
+        if($request->file('photo')){
+            # Get Original Type Of Image 
+            $extension = $request->file('photo')->getClientOriginalExtension();
+            $newName = $request->name.'.'.now()->timestamp.'.'.$extension;
+            $request->file('photo')->storeAs('photo', $newName);
+        }
+
+        $request['image'] = $newName;
         $student = Student::create($request->all());
         # Create Flash Message
         if($student){
@@ -53,7 +64,7 @@ class StudentController extends Controller
             Session::flash('error-store');
             Session::flash('message', 'Add New Student Error!');
         }
-        return redirect('/students');
+    return redirect('/students');
     }
 
     # Update Data

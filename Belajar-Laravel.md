@@ -202,3 +202,16 @@ Class -> Student : One To Many
 # 21.)Search Data + Pagination
 
 [Search-Data] : Search Data adalah fitur dimana memungkinkan "User" untuk mencari suatu data berdasarkan keinginannya
+
+# 22.)Upload Image
+
+# 23.)Login & Register 
+
+[Login] : Adalah proses masuk kedalam suatu aplikasi menggunakan akun
+
+[Logout] : Adalah proses keluar dari suatu aplikasi 
+
+[Authentication] : Merupakan proses untuk memastikan suatu pengenalan atau memastikan suatu pengakuan
+
+[Middleware] : Middleware pada Laravel bertugas melakukan pengecekan terhadap user yang sudah mempunyai hak akses web atau belum 
+
