@@ -35,6 +35,11 @@
                 <a class="nav-link {{ ($title == "Teachers") ? 'active' : '' }}" href="/teacher">Teachers[Master]</a>
               </li>
             </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="/logout" class="btn btn-danger btn-sm">Logout</a>
+              </li>
+            </ul>
           </div>
         </div>
     </nav>

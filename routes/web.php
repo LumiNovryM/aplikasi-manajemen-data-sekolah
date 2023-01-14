@@ -23,20 +23,20 @@ use App\Http\Controllers\StudentcurricularController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('home',[
-        "name" => "Lumi Novry M",
-        "role" => "Admin",
         "title" => "Home"
     ]);
 });
 
 # Login Route 
 // 1.)Login page
-Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
 // 2.)Check Login
-Route::post('/login', [AuthController::class, 'authenticating']);
+Route::post('/login', [AuthController::class, 'auth'])->middleware('guest');
 
+# Logout Route
+Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 # Student-Route
 // 1.)Index Route
